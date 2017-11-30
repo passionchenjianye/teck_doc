@@ -23,5 +23,3 @@ ENV PATH $PATH:$JAVA_HOME/bin
 ENV M2_HOME /usr/local/maven/maven-3.3.9
 ENV PATH $PATH:$M2_HOME/bin
 ```
-
-RUN yum install -y mysql-server mysql

@@ -14,20 +14,20 @@ Spring Boot正是在这样的一个背景下被抽象出来的开发框架，它
 #### 三、Spring Boot核心功能
 1. 内置Servlet容器Tomcat、Jetty、Undertow。默认是tomcat，可是自定义切换。
 ```xml
-  <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-        <exclusions>
-            <exclusion>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            </exclusion>
-        </exclusions>
-  </dependency>
-  <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-jetty</artifactId>
-  </dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <exclusions>
+  <exclusion>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-tomcat</artifactId>
+  </exclusion>
+  </exclusions>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-jetty</artifactId>
+</dependency>
 ```
 
 2. 独立运行项目
@@ -36,7 +36,7 @@ Spring Boot正是在这样的一个背景下被抽象出来的开发框架，它
   java -jar xxx.jar --server.port:8088
 ```
 
-3. 提供starter简化Maven配置
+3. 提供starter简化Maven配置, 并减少包之间的版本冲突
 ```xml
   <?xml version="1.0" encoding="UTF-8"?>
   <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
