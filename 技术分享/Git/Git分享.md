@@ -38,7 +38,6 @@ $ sudo apt install git
 
 # 第二步：配置
 $ git config --global user.name "test"
-
 $ git config --global user.email "test@qq.com"
 ```
 #### 2. Mac OS
@@ -98,6 +97,11 @@ $ git log -3 #查看最近三次提交
 
 # 提交的历史命令查看
 $ git reflog
+
+# 版本回退
+$ git reset --hard master~3
+$ git reset --hard HEAD^
+$ git reset --hard 232c721
 ```
 
 #### 3. Git分支
@@ -155,7 +159,7 @@ $ git rebase --continue
 $ git rebase --abort
 ```
 
-    变基概念：
+**变基概念：**
 
 ![image](./rebase1.jpg)
 
@@ -163,7 +167,7 @@ $ git rebase --abort
 
 
 
-    变基和合并区别：
+**变基和合并区别：**
 
 ![image](./rebase3.jpg)
 
