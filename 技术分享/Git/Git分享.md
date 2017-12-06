@@ -31,25 +31,28 @@ Git是目前世界上最先进的分布式版本控制系统，它是由linux�
 
 ## 四、Git的安装
 1. Linux(Ubuntu系统为例)
-```script
+
+```sh
 # 第一步：安装git
-sudo apt install git
+$ sudo apt install git
 
 # 第二步：配置
-git config --global user.name "test"
-git config --global user.email "test@qq.com"
+$ git config --global user.name "test"
+
+$ git config --global user.email "test@qq.com"
 ```
 2. Mac OS
-```script
+
+```sh
 # 第一步：用homebrew安装, 需首先安装homebrew
-homebrew /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ homebrew /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # 第二步：安装git
-sudo apt install git
+$ sudo apt install git
 
 # 第三步：配置
-git config --global user.name "test"
-git config --global user.email "test@qq.com"
+$ git config --global user.name "test"
+$ git config --global user.email "test@qq.com"
 ```
 3. Windows
 
@@ -65,94 +68,93 @@ git config --global user.email "test@qq.com"
 ![image](./status.png)
 
 2. Git基本命令
-```script
+```sh
 # 创建git仓库
-git init testgit;
+$ git init testgit;
 
 # 创建文件，当前文件是未追踪状态
-touch test.txt # 这个不是git命令
+$ touch test.txt # 这个不是git命令
 
 # 工作区到暂存区
-git add test.txt
+$ git add test.txt
 
 # 撤销对文件的修改
-git checkout -- test.txt
+$ git checkout -- test.txt
 
 # 状态查看
-git status
+$ git status
 
 # 暂存区到工作区
-git rm --cached test.txt
-git reset HEAD -- test.txt
+$ git rm --cached test.txt
+$ git reset HEAD -- test.txt
 
 # 暂存区到仓库
-git commit -m "add test.txt file"
+$ git commit -m "add test.txt file"
 
 # 历史记录查看
-git log #查看全部
-git log -3 #查看最近三次提交
+$ git log #查看全部
+$ git log -3 #查看最近三次提交
 
 # 提交的历史命令查看
-git reflog
+$ git reflog
 
 ```
 
 3. Git分支
-```script
-### 本地分支
+
+```sh
 # 查看分支
-git branch
-git branch -v
+$ git branch
+$ git branch -v
 
 # 创建分支
-git branch testing #创建不切换分支
-git checkout -b dev #创建并切换分支
+$ git branch testing #创建不切换分支
+$ git checkout -b dev #创建并切换分支
 
 # 切换分支
-git checkout testing
+$ git checkout testing
 
 # 删除分支
-git branch -d testing
-
+$ git branch -d testing
 ```
 
 4. 远程仓库
-```script
+```sh
 # 查看远程仓库
-git remote -v
+$ git remote -v
 
 # 拉取项目(本地没有仓库)
-git clone https://gitlab.com/schuckbeta/testgit.git
+$ git clone https://gitlab.com/schuckbeta/testgit.git
 
 # 关联远程仓库(本地已有仓库)
-git remote add origin https://gitlab.com/schuckbeta/testgit.git
+$ git remote add origin https://gitlab.com/schuckbeta/testgit.git
 
 # 取消关联远程仓库
-git remote remove origin
+$ git remote remove origin
 
 # 推送本地仓库代码到远程仓库
-git push origin master
+$ git push origin master
 
 # 拉取不自动合并
-git fetch origin
-git log -p master..origin/master
-git merge origin/master
+$ git fetch origin
+$ git log -p master..origin/master
+$ git merge origin/master
 
 # 拉取并自动合并
-git pull origin master
+$ git pull origin master
 
 ```
 
 5. 冲突管理
-```script
+```sh
 # 从master分支变基
-git rebase origin/master
+$ git rebase origin/master
 
 # 继续变基
-git rebase --continue
+$ git rebase --continue
 
 # 终止变基
-git rebase --abort
+$ git rebase --abort
 ```
 
     变基概念：
