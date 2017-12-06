@@ -30,7 +30,7 @@ Git是目前世界上最先进的分布式版本控制系统，它是由linux�
     ![image](./svn_2.png)
 
 ## 四、Git的安装
-1. Linux(Ubuntu系统为例)
+#### 1. Linux(Ubuntu系统为例)
 
 ```sh
 # 第一步：安装git
@@ -41,7 +41,7 @@ $ git config --global user.name "test"
 
 $ git config --global user.email "test@qq.com"
 ```
-2. Mac OS
+#### 2. Mac OS
 
 ```sh
 # 第一步：用homebrew安装, 需首先安装homebrew
@@ -54,7 +54,7 @@ $ sudo apt install git
 $ git config --global user.name "test"
 $ git config --global user.email "test@qq.com"
 ```
-3. Windows
+#### 3. Windows
 
     第一步：官网下载https://git-scm.com/downloads
 
@@ -63,11 +63,12 @@ $ git config --global user.email "test@qq.com"
     第三步：配置，如Linux和Mac一致
 
 ## 五、Git基础
-1. 三种状态: 已提交（committed）、已修改（modified）和已暂存（staged）
+#### 1. 三种状态: 已提交（committed）、已修改（modified）和已暂存（staged）
 
 ![image](./status.png)
 
-2. Git基本命令
+#### 2. Git基本命令
+
 ```sh
 # 创建git仓库
 $ git init testgit;
@@ -97,10 +98,9 @@ $ git log -3 #查看最近三次提交
 
 # 提交的历史命令查看
 $ git reflog
-
 ```
 
-3. Git分支
+#### 3. Git分支
 
 ```sh
 # 查看分支
@@ -117,8 +117,7 @@ $ git checkout testing
 # 删除分支
 $ git branch -d testing
 ```
-
-4. 远程仓库
+#### 4. 远程仓库
 ```sh
 # 查看远程仓库
 $ git remote -v
@@ -142,10 +141,9 @@ $ git merge origin/master
 
 # 拉取并自动合并
 $ git pull origin master
-
 ```
 
-5. 冲突管理
+#### 5. 冲突管理
 ```sh
 # 从master分支变基
 $ git rebase origin/master
