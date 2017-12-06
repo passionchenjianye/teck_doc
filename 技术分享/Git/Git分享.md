@@ -47,7 +47,7 @@ $ git config --global user.email "test@qq.com"
 $ homebrew /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # 第二步：安装git
-$ sudo apt install git
+$ brew install git
 
 # 第三步：配置
 $ git config --global user.name "test"
