@@ -62,7 +62,7 @@ $ git config --global user.email "test@qq.com"
     第三步：配置，如Linux和Mac一致
 
 ## 五、Git基础
-#### 1. 三种状态: 已提交（committed）、已修改（modified）和已暂存（staged）
+#### 1. 三种状态: 已修改（modified）、已暂存（staged 和 已提交（committed）
 
 ![image](./status.png)
 
