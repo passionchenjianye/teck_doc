@@ -242,3 +242,13 @@ public interface UserMapper {
 ```
 
 # 四、Mybatis解析和运行原理
+
+## 1. 加载配置文件
+
+## 2. 创建SqlSessionFactory
+
+* 创建Configuration对象并初始化(XMLConfigBuilder)
+* 映射器的解析(XMLMapperBuilder)
+* 构建SqlSessionFactory
+
+## 3. 运行SqlSession
